@@ -1,7 +1,7 @@
-from src.components.afiliado import Afiliado
-from src.components.producto_financiero import ProductoFinanciero
-from src.components.recomendacion import ResultadoCriterio
-from src.services.reglas.base import ReglaProducto
+from components.afiliado import Afiliado
+from components.producto_financiero import ProductoFinanciero
+from components.recomendacion import ResultadoCriterio
+from services.reglas.base import ReglaProducto
 
 PUNTOS_BASE = 10
 PUNTOS_POSIBLE_CABEZA_DE_HOGAR = 5

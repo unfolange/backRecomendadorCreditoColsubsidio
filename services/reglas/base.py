@@ -8,9 +8,9 @@ producto nuevo significa crear una clase nueva, sin tocar el motor.
 
 from abc import ABC, abstractmethod
 
-from src.components.afiliado import Afiliado
-from src.components.producto_financiero import ProductoFinanciero
-from src.components.recomendacion import Recomendacion, ResultadoCriterio
+from components.afiliado import Afiliado
+from components.producto_financiero import ProductoFinanciero
+from components.recomendacion import Recomendacion, ResultadoCriterio
 
 
 class ReglaProducto(ABC):

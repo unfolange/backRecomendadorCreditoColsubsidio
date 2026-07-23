@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.components.afiliado import Afiliado
+from components.afiliado import Afiliado
 
 # El archivo fue exportado con codificación Latin-1 y separador ';'.
 CODIFICACION_CSV = "latin-1"

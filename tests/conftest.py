@@ -1,6 +1,6 @@
 import pytest
 
-from src.components.afiliado import Afiliado
+from components.afiliado import Afiliado
 
 
 @pytest.fixture

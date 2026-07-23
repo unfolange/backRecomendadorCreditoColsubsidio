@@ -1,4 +1,4 @@
-from src.utils.lector_datos import (
+from utils.lector_datos import (
     parsear_con_quien_vive,
     parsear_ingresos,
     parsear_numero_hijos,

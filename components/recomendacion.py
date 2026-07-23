@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass, field
 
-from src.components.producto_financiero import ProductoFinanciero
+from components.producto_financiero import ProductoFinanciero
 
 
 @dataclass(frozen=True)

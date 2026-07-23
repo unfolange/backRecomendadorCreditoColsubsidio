@@ -6,7 +6,7 @@ propósito: el dominio no debe depender de cómo se serializa por HTTP.
 
 from pydantic import BaseModel
 
-from src.components.recomendacion import Recomendacion
+from components.recomendacion import Recomendacion
 
 
 class RecomendacionSchema(BaseModel):

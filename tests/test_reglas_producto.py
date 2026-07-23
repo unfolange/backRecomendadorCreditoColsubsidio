@@ -1,7 +1,7 @@
-from src.services.reglas.regla_credito_educativo import ReglaCreditoEducativo
-from src.services.reglas.regla_credito_hipotecario import ReglaCreditoHipotecario
-from src.services.reglas.regla_credito_mujer import ReglaCreditoMujer
-from src.services.reglas.regla_cupo_credito import ReglaCupoDeCredito
+from services.reglas.regla_credito_educativo import ReglaCreditoEducativo
+from services.reglas.regla_credito_hipotecario import ReglaCreditoHipotecario
+from services.reglas.regla_credito_mujer import ReglaCreditoMujer
+from services.reglas.regla_cupo_credito import ReglaCupoDeCredito
 
 
 class TestReglaCupoDeCredito:

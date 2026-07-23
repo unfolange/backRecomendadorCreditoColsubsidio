@@ -7,8 +7,8 @@ esta clase debería modificarse.
 
 from pathlib import Path
 
-from src.components.afiliado import Afiliado
-from src.utils.lector_datos import cargar_afiliados
+from components.afiliado import Afiliado
+from utils.lector_datos import cargar_afiliados
 
 
 class RepositorioAfiliados:

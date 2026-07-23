@@ -2,10 +2,10 @@
 y devuelve solo los productos elegibles, ordenados de más a menos
 recomendado."""
 
-from src.components.afiliado import Afiliado
-from src.components.recomendacion import Recomendacion
-from src.services.reglas import REGLAS_ACTIVAS
-from src.services.reglas.base import ReglaProducto
+from components.afiliado import Afiliado
+from components.recomendacion import Recomendacion
+from services.reglas import REGLAS_ACTIVAS
+from services.reglas.base import ReglaProducto
 
 
 class MotorRecomendacion:

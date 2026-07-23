@@ -1,8 +1,8 @@
-from src.components.afiliado import Afiliado
-from src.components.producto_financiero import ProductoFinanciero
-from src.components.recomendacion import ResultadoCriterio
-from src.services.reglas.base import ReglaProducto
-from src.services.reglas.pesos_comunes import puntos_por_categoria
+from components.afiliado import Afiliado
+from components.producto_financiero import ProductoFinanciero
+from components.recomendacion import ResultadoCriterio
+from services.reglas.base import ReglaProducto
+from services.reglas.pesos_comunes import puntos_por_categoria
 
 ANTIGUEDAD_TOPE_PARA_PUNTAJE = 10
 EDAD_LIMITE_PARA_PLAZO_LARGO = 55

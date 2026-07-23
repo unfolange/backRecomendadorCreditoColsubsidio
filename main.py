@@ -9,17 +9,17 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, UploadFile
 
-from src.schemas import (
+from schemas import (
     RecomendacionesAfiliadoSchema,
     RecomendacionesLoteSchema,
     RecomendacionSchema,
 )
-from src.services.motor_recomendacion import MotorRecomendacion
-from src.services.repositorio_afiliados import RepositorioAfiliados
-from src.utils.lector_ids import leer_ids_desde_archivo
+from services.motor_recomendacion import MotorRecomendacion
+from services.repositorio_afiliados import RepositorioAfiliados
+from utils.lector_ids import leer_ids_desde_archivo
 
 RUTA_CSV_AFILIADOS = (
-    Path(__file__).resolve().parent.parent
+    Path(__file__).resolve().parent
     / "data"
     / "Afiliados_Sinteticos_Colsubsidio_2000(Afiliados).csv"
 )

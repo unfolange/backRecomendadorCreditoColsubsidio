@@ -1,5 +1,5 @@
-from src.components.producto_financiero import ProductoFinanciero
-from src.services.motor_recomendacion import MotorRecomendacion
+from components.producto_financiero import ProductoFinanciero
+from services.motor_recomendacion import MotorRecomendacion
 
 
 def test_solo_devuelve_productos_elegibles(crear_afiliado):
