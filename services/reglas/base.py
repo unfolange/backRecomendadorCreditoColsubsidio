@@ -16,6 +16,11 @@ from components.recomendacion import Recomendacion, ResultadoCriterio
 class ReglaProducto(ABC):
     producto: ProductoFinanciero
 
+    # Suma de los puntos máximos que puede aportar cada criterio de
+    # `calcular_criterios`. Permite convertir el puntaje crudo en un
+    # porcentaje de afinidad (0-100) comparable entre productos.
+    puntaje_maximo: float
+
     @abstractmethod
     def es_elegible(self, afiliado: Afiliado) -> bool:
         """Condición determinante: si no se cumple, el producto no aplica."""

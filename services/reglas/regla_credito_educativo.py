@@ -13,6 +13,12 @@ class ReglaCreditoEducativo(ReglaProducto):
 
     producto = ProductoFinanciero.CREDITO_EDUCATIVO
 
+    # número de hijos máximo real en los datos ("Más de 4" se trata como
+    # 5, ver utils/lector_datos.py) * puntos por hijo (5*5=25) +
+    # categoría máxima (15).
+    NUMERO_HIJOS_MAXIMO_EN_DATOS = 5
+    puntaje_maximo = NUMERO_HIJOS_MAXIMO_EN_DATOS * PUNTOS_POR_HIJO + 15
+
     def es_elegible(self, afiliado: Afiliado) -> bool:
         return afiliado.tiene_hijos
 

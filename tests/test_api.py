@@ -35,3 +35,40 @@ def test_lote_con_csv_en_memoria():
     ids_encontrados = {resultado["id_afiliado"] for resultado in cuerpo["resultados"]}
     assert ids_encontrados == {"AF-000001", "AF-000002"}
     assert cuerpo["ids_no_encontrados"] == ["AF-999999"]
+
+
+def test_servicios_recomendados_de_afiliado_existente():
+    respuesta = cliente.get("/afiliados/AF-000001/servicios-recomendados")
+    assert respuesta.status_code == 200
+
+    cuerpo = respuesta.json()
+    assert cuerpo["id_afiliado"] == "AF-000001"
+    assert isinstance(cuerpo["tiene_historial_uso"], bool)
+    assert isinstance(cuerpo["recomendaciones"], list)
+    if cuerpo["recomendaciones"]:
+        primera = cuerpo["recomendaciones"][0]
+        assert {"servicio", "subservicio", "puntaje", "explicacion"} <= primera.keys()
+        assert 0 <= primera["puntaje"] <= 100
+
+
+def test_servicios_recomendados_afiliado_inexistente_devuelve_404():
+    respuesta = cliente.get("/afiliados/AF-999999/servicios-recomendados")
+    assert respuesta.status_code == 404
+
+
+def test_afinidad_productos_de_afiliado_existente():
+    respuesta = cliente.get("/afiliados/AF-000001/afinidad-productos")
+    assert respuesta.status_code == 200
+
+    cuerpo = respuesta.json()
+    assert cuerpo["id_afiliado"] == "AF-000001"
+    assert isinstance(cuerpo["productos"], list)
+    if cuerpo["productos"]:
+        primero = cuerpo["productos"][0]
+        assert {"producto", "afinidad", "razones"} <= primero.keys()
+        assert 0 <= primero["afinidad"] <= 100
+
+
+def test_afinidad_productos_afiliado_inexistente_devuelve_404():
+    respuesta = cliente.get("/afiliados/AF-999999/afinidad-productos")
+    assert respuesta.status_code == 404

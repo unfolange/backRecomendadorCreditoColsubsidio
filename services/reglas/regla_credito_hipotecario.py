@@ -15,6 +15,10 @@ class ReglaCreditoHipotecario(ReglaProducto):
 
     producto = ProductoFinanciero.CREDITO_HIPOTECARIO
 
+    # categoría máxima * 2 (C = 15*2=30) + antigüedad tope * 2 (10*2=20)
+    # + bono máximo por edad (10).
+    puntaje_maximo = 15 * 2 + ANTIGUEDAD_TOPE_PARA_PUNTAJE * 2 + 10
+
     def es_elegible(self, afiliado: Afiliado) -> bool:
         return not afiliado.vive_en_vivienda_propia
 

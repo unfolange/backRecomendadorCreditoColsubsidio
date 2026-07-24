@@ -14,6 +14,9 @@ class ReglaCupoDeCredito(ReglaProducto):
 
     producto = ProductoFinanciero.CUPO_DE_CREDITO
 
+    # antigüedad tope (10 años * 2) + categoría máxima (C = 15).
+    puntaje_maximo = ANTIGUEDAD_TOPE_PARA_PUNTAJE * 2 + 15
+
     def es_elegible(self, afiliado: Afiliado) -> bool:
         return afiliado.antiguedad_anios >= ANTIGUEDAD_MINIMA_ANIOS
 

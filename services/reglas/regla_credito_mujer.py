@@ -12,6 +12,8 @@ class ReglaCreditoMujer(ReglaProducto):
 
     producto = ProductoFinanciero.CREDITO_MUJER
 
+    puntaje_maximo = PUNTOS_BASE + PUNTOS_POSIBLE_CABEZA_DE_HOGAR
+
     def es_elegible(self, afiliado: Afiliado) -> bool:
         return afiliado.genero.strip().lower() == "mujer"
 
